@@ -18,6 +18,9 @@ namespace ZborAbru
             sql.BindParam("ids", ids);
             sql.Execute();
             Console.Write(sql.RowsAffected);
+            sql = null;
+            app.Finalize();
+            app = null;
             Console.ReadKey();
         }
     }
